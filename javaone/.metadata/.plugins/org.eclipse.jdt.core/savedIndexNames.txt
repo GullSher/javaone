@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+G:\WorkFolder2\work folder 8\java-work-folder8\javaone\javaone\.metadata\.plugins\org.eclipse.jdt.core
+717410376.index
+791661869.index
+1865797976.index

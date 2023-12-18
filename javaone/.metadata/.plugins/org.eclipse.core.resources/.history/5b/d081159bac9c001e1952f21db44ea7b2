@@ -1,0 +1,82 @@
+package CrudTwo;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+import java.awt.CardLayout;
+import java.awt.FlowLayout;
+import javax.swing.BoxLayout;
+import javax.swing.JTextField;
+import javax.swing.SpringLayout;
+
+public class Crud2 {
+
+	private JFrame frame;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Crud2 window = new Crud2();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Crud2() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		SpringLayout springLayout = new SpringLayout();
+		frame.getContentPane().setLayout(springLayout);
+		
+		JButton btnNewButton = new JButton("New button");
+		springLayout.putConstraint(SpringLayout.NORTH, btnNewButton, 82, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, btnNewButton, 25, SpringLayout.WEST, frame.getContentPane());
+		frame.getContentPane().add(btnNewButton);
+		
+		textField = new JTextField();
+		springLayout.putConstraint(SpringLayout.NORTH, textField, 0, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, textField, 25, SpringLayout.WEST, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.SOUTH, textField, 71, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.EAST, textField, 424, SpringLayout.WEST, frame.getContentPane());
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		springLayout.putConstraint(SpringLayout.NORTH, btnNewButton_1, 82, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, btnNewButton_1, 124, SpringLayout.WEST, frame.getContentPane());
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_1_1 = new JButton("New button");
+		springLayout.putConstraint(SpringLayout.NORTH, btnNewButton_1_1, 82, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, btnNewButton_1_1, 223, SpringLayout.WEST, frame.getContentPane());
+		frame.getContentPane().add(btnNewButton_1_1);
+		
+		JButton btnNewButton_1_1_1 = new JButton("New button");
+		springLayout.putConstraint(SpringLayout.NORTH, btnNewButton_1_1_1, 82, SpringLayout.NORTH, frame.getContentPane());
+		springLayout.putConstraint(SpringLayout.WEST, btnNewButton_1_1_1, 322, SpringLayout.WEST, frame.getContentPane());
+		frame.getContentPane().add(btnNewButton_1_1_1);
+	}
+}
